@@ -1,0 +1,24 @@
+# This is a generated file. Not intended for manual editing.
+version: "3"
+services:
+  clientcomponent:
+    build:
+      context: "D:\\GitHub\\highloadserv\\clientcomponent"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/clientcomponent.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      NUGET_PACKAGES: "C:\\Users\\maksi\\.nuget\\packages"
+      NUGET_FALLBACK_PACKAGES: "C:\\Users\\maksi\\.nuget\\packages"
+    image: "clientcomponent:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\maksi\\.nuget\\packages:/root/.nuget/fallbackpackages"
+    - "D:\\GitHub\\highloadserv\\clientcomponent:/app:rw"
+    - "D:\\GitHub\\highloadserv\\clientcomponent:/src:rw"
+    working_dir: "/app"

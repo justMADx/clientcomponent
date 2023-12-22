@@ -1,0 +1,11 @@
+﻿version: '3'
+services:
+  server:
+    build: D:\GitHub\highloadserv\server
+    ports:
+      - "8080:80"
+  clientcomponent:
+    build: D:\GitHub\highloadserv\clientcomponent
+    network_mode: host
+    tty: true
+    stdin_open: true
